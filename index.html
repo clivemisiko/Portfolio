@@ -7,16 +7,6 @@
   <!-- Link to the CSS file -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      document
-        .querySelector(this.getAttribute("href"))
-        .scrollIntoView({ behavior: "smooth" });
-    });
-  });
-</script>
 <!-- ======= Navigation Bar ======= -->
 <nav>
   <button id="mode-toggle">🌙 Dark Mode</button>
@@ -34,7 +24,7 @@
     <p>Web Developer / Student / Cyber Security Analyst /
     <p>
     <!-- Inside <header> -->
-    <img src="C:\Users\ADMIN\Pictures\Camera Roll\WhatsApp Image 2025-06-05 at 10.02.27_c6c3a585.jpg" alt="My Profile Photo" class="profile-pic" />
+    <img src="C:\Users\Public\Documents\my-portfolio\images\profile.jpg" alt="My Profile Photo" class="profile-pic" />
 
   </header>
 
@@ -91,5 +81,39 @@
   <footer>
     <p>&copy; 2025 MISIKO~CLIVE. All rights reserved.</p>
   </footer>
+  
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      document
+        .querySelector(this.getAttribute("href"))
+        .scrollIntoView({ behavior: "smooth" });
+    });
+  });
+</script>
+<script>
+  const toggle = document.getElementById("mode-toggle");
+  const body = document.body;
+
+  // Check local storage for saved mode
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+    toggle.textContent = "☀️ Light Mode";
+  }
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+      toggle.textContent = "☀️ Light Mode";
+      localStorage.setItem("theme", "dark");
+    } else {
+      toggle.textContent = "🌙 Dark Mode";
+      localStorage.setItem("theme", "light");
+    }
+  });
+</script>
+
 </body>
 </html>
