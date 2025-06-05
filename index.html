@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <!-- Link to the CSS file -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      document
+        .querySelector(this.getAttribute("href"))
+        .scrollIntoView({ behavior: "smooth" });
+    });
+  });
+</script>
+<!-- ======= Navigation Bar ======= -->
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<body>
+  <!-- ======= Header / Hero Section ======= -->
+  <header>
+    <h1>CLIVE MISIKO MUTENDE</h1>
+    <p>Web Developer / Student / Cyber Security Analyst /
+    <p>
+    <!-- Inside <header> -->
+    <img src="C:\Users\ADMIN\Pictures\Camera Roll\WhatsApp Image 2025-06-05 at 10.02.27_c6c3a585.jpg" alt="My Profile Photo" class="profile-pic" />
+
+  </header>
+
+  <!-- ======= About Section ======= -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi! I’m Clive Misiko Mutende, a beginner web developer based in Juja, Kiambu. I’m
+      passionate about developing websites and troubleshooting. Feel free to explore
+      my projects below or get in touch! 
+      Here's my <a href="https://github.com/clivemisiko/Python_Projects.git">Github</a> and <a href="https://www.linkedin.com/in/clive-mutende-113205300/">linkedin</a>
+
+    </p>
+  </section>
+
+  <!-- ======= Projects Section ======= -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <!-- We’ll add individual project cards here later -->
+      <div class="project-item">
+        <h3>A Calculator  with GUI</h3>
+        <p>Created a simple calculator with a graphical user interface (GUI).</p>
+        <a href="https://github.com/clivemisiko/Python_Projects/blob/7d8bfcd640df51271f1d259c2812008bc209c665/Calculator.py">View Details</a>
+      </div>
+       <div class="project-item">
+        <h3>Tic-Tac-Toe Game</h3>
+        <p>Developed a basic Tic Tac Toe game using Python.</p>
+        <a href="https://github.com/clivemisiko/Python_Projects/blob/7d8bfcd640df51271f1d259c2812008bc209c665/Tic-Tac-Toe%20Game.py">View Details</a>
+      </div>
+
+      <div class="project-item">
+        <h3>Unit Converter</h3>
+        <p>Built an app to convert measurements between units.</p>
+        <a href="https://github.com/clivemisiko/Python_Projects/blob/7d8bfcd640df51271f1d259c2812008bc209c665/Unit_Conveter.py">View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>
+      Feel free to reach out to me via email: <a href="mailto:clivemisiko01@gmail.com"
+        >clivemisiko01@gmail.com</a> 
+        <p>
+        My Phone NO: +254 746 749299
+                </p>
+      
+    </p>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <p>&copy; 2025 MISIKO~CLIVE. All rights reserved.</p>
+  </footer>
+</body>
+</html>
